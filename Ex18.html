@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Simple Animation</title>
+<script language="JavaScript">
+function moveNext() {
+  let anil = document.getElementById("anil");
+  let topPosition = parseInt(anil.style.top, 10);
+
+  if (topPosition < 500) {
+    anil.style.top = (topPosition + 5) + "px";
+    setTimeout(moveNext, 100);
+  }
+}
+
+window.onload = function() {
+  document.getElementById("anil").style.top = "10px";
+  moveNext();
+};
+</script>
+</head>
+<body>
+<div id="anil" style="position:absolute; top:10px; left:10px">
+Text, step forward!
+</div>
+</body>
+</html>

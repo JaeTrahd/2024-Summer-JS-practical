@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>anima1</title>
+<script language="JavaScript">
+function moveTxt() {
+  let anime = document.getElementById("anime");
+  let topPosition = parseInt(anime.style.top, 10);
+  let leftPosition = parseInt(anime.style.left, 10);
+  if (topPosition < window.innerHeight / 2 && leftPosition > window.innerWidth / 2) {
+    anime.style.top = (topPosition + 2) + "px";
+    anime.style.left = (leftPosition - 2) + "px";
+    setTimeout(moveTxt, 10);
+  }
+}
+
+window.onload = function() {
+  let anime = document.getElementById("anime");
+  anime.style.top = "10px";
+  anime.style.left = (window.innerWidth - 50) + "px"; 
+  moveTxt();
+};
+</script>
+</head>
+<body>
+<div id="anime" style="position:absolute; top:10px; left:10px">
+Text, step forward!
+</div>
+</body>
+</html>

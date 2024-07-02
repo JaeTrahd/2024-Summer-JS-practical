@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Work 7</title>
+<script language="JavaScript" type="text/JavaScript">
+function displaySubjects() {
+  var subjects = [
+    "Mathematics", "Physics", "Chemistry", "Biology", 
+    "History", "Geography", "Literature", "Art", 
+    "Computer Science", "Physical Education", "Economics", "Sociology"
+  ];
+  
+  var sciences = subjects.slice(0, 4).concat(subjects.slice(8, 9));
+  var humanities = subjects.slice(4, 8).concat(subjects.slice(11, 12));
+  
+  document.write("<h2>Exact Sciences</h2>");
+  document.write(sciences.join(", ") + "<br><br>");
+  
+  document.write("<h2>Humanities</h2>");
+  document.write(humanities.join(", ") + "<br>");
+}
+</script>
+</head>
+<body onload="displaySubjects()">
+</body>
+</html>

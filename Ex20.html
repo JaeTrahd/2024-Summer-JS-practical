@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex20</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #top, #bottom {
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-size: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        #top {
+            background-color: blue;
+        }
+        #bottom {
+            background-color: green;
+        }
+        #middle {
+            position: absolute;
+            top: 110px;
+            left: 0;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        function moveImage() {
+            var img = document.getElementById('middle');
+            var position = 0;
+            var interval = setInterval(frame, 5);
+
+            function frame() {
+                if (position >= window.innerWidth) {
+                    position = -img.width; // Reset position to start again
+                } else {
+                    position++;
+                    img.style.left = position + 'px';
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="moveImage()">
+    <div id="top">Top Square</div>
+    <img id="middle" src="image2.gif" alt="Moving Image">
+    <div id="bottom">Bottom Square</div>
+</body>
+</html>

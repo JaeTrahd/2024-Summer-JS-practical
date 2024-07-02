@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>Exercise 3</title>
+<script>
+  
+  window.onload = function() {
+    let userName = prompt("Enter your name here");
+
+    document.write("<p>Your name: " + userName + "</p>");
+    
+    let startOver = confirm("Start over?");
+    
+    if (startOver) {
+      let tired = confirm("Are you tired?");
+      if (tired) {
+        alert("Well, that's right!");
+      } else {
+        alert("Are you tired?");
+      }
+    } else {
+      alert("Well, that's right!");
+    }
+  }
+</script>
+</head>
+<body>
+</body>
+</html>

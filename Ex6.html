@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Table of Powers of Two</title>
+</head>
+<body>
+<h1>Table of Powers of Two</h1>
+<script language="JavaScript" type="text/JavaScript">
+document.write("<table border='1'>");
+document.write("<tr><th>Degree</th><th>Result</th></tr>");
+for (var i = 0; i <= 5; i++) {
+  var result = Math.pow(2, i);
+  document.write("<tr><td>2<sup>" + i + "</sup></td><td>" + result + "</td></tr>");
+}
+document.write("</table>");
+</script>
+</body>
+</html>

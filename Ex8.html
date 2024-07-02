@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Browser Redirection</title>
+<script type="text/javascript">
+  function redirectBasedOnBrowser() {
+    var browserName = navigator.appName;
+    if (browserName === "Microsoft Internet Explorer") {
+      window.location.href = "Ex1.html";
+    } else {
+      window.location.href = "Ex3.html";
+    }
+  }
+  redirectBasedOnBrowser();
+</script>
+</head>
+<body>
+<h1>Welcome to the Browser Redirection Page</h1>
+<p>If you are seeing this message, the redirection script did not work.</p>
+</body>
+</html>
